@@ -74,7 +74,7 @@
     </div>
 
     <h2>0. Identita dell'app e dello sviluppatore</h2>
-    <p>Questa informativa si applica all'app <strong>PoketCards</strong> (in precedenza PokeVault; package Android: <strong>com.emabuia.pokevault</strong>) pubblicata su Google Play dallo sviluppatore <strong>Emanuele Buia</strong>.</p>
+    <p>Questa informativa si applica all'app <strong>PoketCards</strong> (in precedenza PokeVault; package Android e bundle ID iOS: <strong>com.emabuia.pokevault</strong>) pubblicata su Google Play e sull'App Store di Apple dallo sviluppatore <strong>Emanuele Buia</strong>.</p>
 
     <h2>1. Titolare del trattamento</h2>
     <p>Il titolare del trattamento dei dati personali per l'app PoketCards e lo sviluppatore indipendente Emanuele Buia. Per qualsiasi richiesta relativa alla privacy, puoi contattarci all'indirizzo: <a href="mailto:devteam.vaultcards@hotmail.com">devteam.vaultcards@hotmail.com</a></p>
@@ -83,11 +83,11 @@
     <p>PoketCards raccoglie e tratta le seguenti categorie di dati:</p>
 
     <ul>
-        <li><strong>Dati di autenticazione</strong> — indirizzo email, nome utente e credenziali di accesso (tramite Firebase Authentication o Google Sign-In).</li>
+        <li><strong>Dati di autenticazione</strong> — indirizzo email, nome utente e credenziali di accesso (tramite Firebase Authentication, Google Sign-In o, su iPhone, Accedi con Apple). Con Accedi con Apple puoi scegliere di nascondere la tua email: in quel caso riceviamo solo l'indirizzo anonimo di inoltro creato da Apple.</li>
         <li><strong>Dati della collezione</strong> — carte, mazzi (deck), valutazioni, note e metadati associati alla tua collezione personale.</li>
         <li><strong>Dati della fotocamera</strong> — immagini acquisite dalla fotocamera esclusivamente per la funzione di scansione OCR delle carte. Le immagini vengono elaborate localmente sul dispositivo e <strong>non vengono inviate a server esterni</strong>.</li>
-        <li><strong>Dati di acquisto</strong> — le transazioni relative all'abbonamento Premium sono gestite interamente da Google Play. PoketCards memorizza solo lo stato dell'abbonamento (attivo/non attivo), senza accedere ai dati di pagamento.</li>
-        <li><strong>Identificatore del dispositivo</strong> — <strong>solo se riscatti un codice regalo</strong>, l'app invia ai nostri server l'identificatore di installazione Android (<code>ANDROID_ID</code>), un valore che Android assegna alla singola coppia app-dispositivo e che non identifica il telefono presso altre app. I nostri server non lo conservano mai in chiaro: lo trasformano subito in un codice non reversibile e archiviano solo quello. Serve a un'unica cosa, impedire che dallo stesso dispositivo si riscattino piu codici creando account diversi. Non viene usato per profilazione, non viene collegato alla tua attivita nell'app e non viene condiviso con nessuno. Se non riscatti codici regalo, questo dato non lascia mai il tuo dispositivo.</li>
+        <li><strong>Dati di acquisto</strong> — le transazioni relative all'abbonamento Premium sono gestite interamente da Google Play (Android) o dall'App Store di Apple (iPhone). PoketCards memorizza solo lo stato dell'abbonamento (attivo/non attivo), senza accedere ai dati di pagamento.</li>
+        <li><strong>Identificatore del dispositivo</strong> — <strong>solo se riscatti un codice regalo</strong>, l'app invia ai nostri server l'identificatore di installazione Android (<code>ANDROID_ID</code>), un valore che Android assegna alla singola coppia app-dispositivo e che non identifica il telefono presso altre app. I nostri server non lo conservano mai in chiaro: lo trasformano subito in un codice non reversibile e archiviano solo quello. Serve a un'unica cosa, impedire che dallo stesso dispositivo si riscattino piu codici creando account diversi. Non viene usato per profilazione, non viene collegato alla tua attivita nell'app e non viene condiviso con nessuno. Se non riscatti codici regalo, questo dato non lascia mai il tuo dispositivo. L'app per iPhone non riscatta codici regalo e non invia alcun identificatore del dispositivo.</li>
     </ul>
 
     <h2>2-bis. Permessi richiesti dall'app</h2>
@@ -97,6 +97,7 @@
         <li><strong>POSIZIONE APPROSSIMATIVA</strong> (<code>ACCESS_COARSE_LOCATION</code>) — usata solo se attivi TradeRadar, per capire in quale zona ti trovi (vedi il punto 2-ter). L'app non chiede mai la posizione precisa.</li>
         <li><strong>NOTIFICHE</strong> (<code>POST_NOTIFICATIONS</code>) — chiesto solo se attivi TradeRadar, per avvisarti di proposte, appuntamenti e carte che cerchi (vedi il punto 2-ter).</li>
     </ul>
+    <p>Su iPhone gli stessi accessi si chiamano <strong>Fotocamera</strong> e <strong>Posizione</strong> (solo mentre usi l'app, e l'app usa solo la zona di circa 5 km descritta al punto 2-ter); iOS li chiede la prima volta che servono e puoi revocarli dalle Impostazioni del telefono. Le notifiche di TradeRadar su iPhone non sono ancora disponibili.</p>
     <p>PoketCards non accede a microfono, contatti, posizione precisa (GPS), SMS o registro chiamate.</p>
 
     <h2 id="traderadar">2-ter. TradeRadar (scambi tra collezionisti)</h2>
@@ -155,7 +156,8 @@
     <p>I dati possono essere condivisi solo con:</p>
     <ul>
         <li><strong>Google Firebase</strong> — per l'archiviazione e l'autenticazione.</li>
-        <li><strong>Google Play Billing</strong> — per la gestione degli acquisti in-app.</li>
+        <li><strong>Google Play Billing</strong> — per la gestione degli acquisti in-app su Android.</li>
+        <li><strong>Apple</strong> — su iPhone: Accedi con Apple, per l'autenticazione, e l'App Store per la distribuzione dell'app e gli eventuali acquisti in-app.</li>
         <li><strong>Cloudflare (Workers)</strong> — infrastruttura di nostra proprieta che fa da intermediario verso i fornitori terzi elencati sotto, cosi che nessuna richiesta parta mai direttamente dal tuo dispositivo verso di loro. E anche il servizio che verifica i codici regalo: in quel caso soltanto riceve l'identificatore di installazione descritto al punto 2, che trasforma subito in un codice non reversibile.</li>
         <li><strong>Pokewallet.io (api.pokewallet.io)</strong> — per il recupero di prezzi di mercato e del catalogo carte in altre lingue, contattato solo dalla nostra infrastruttura Cloudflare, mai direttamente dal tuo dispositivo. Nessun dato utente viene inviato.</li>
         <li><strong>TCGdex (tcgdex/cards-database, licenza MIT)</strong> — fonte dati per l'aggiornamento automatico del catalogo italiano con le nuove espansioni; nessun dato utente e coinvolto, l'importazione avviene una tantum lato server.</li>
