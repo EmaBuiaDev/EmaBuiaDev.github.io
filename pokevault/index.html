@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PoketCards – App per collezionare carte Pokémon in italiano</title>
-    <meta name="description" content="Gestisci la tua collezione di carte Pokémon in italiano: valore delle carte con i prezzi Cardmarket, scanner, scambi con i collezionisti della tua provincia, mazzi e album. Gratis su Android.">
+    <meta name="description" content="Gestisci la tua collezione di carte Pokémon in italiano: valore delle carte con i prezzi Cardmarket, scanner, scambi con i collezionisti della tua provincia, mazzi e album. Gratis su Android e iPhone.">
     <meta name="google-site-verification" content="W4wgjnqm3Fpl0tEDTtYBLZM8mnaruAKbvCSk1QF9NYY" />
     <link rel="canonical" href="https://emabuiadev.github.io/pokevault/">
     <link rel="icon" type="image/svg+xml" href="/pokevault/icon.svg">
@@ -13,7 +13,7 @@
     <meta property="og:locale" content="it_IT">
     <meta property="og:site_name" content="PoketCards">
     <meta property="og:title" content="PoketCards – La tua collezione di carte Pokémon in italiano">
-    <meta property="og:description" content="Prezzi Cardmarket, scanner, scambi vicino a te, mazzi e album. Gratis su Android.">
+    <meta property="og:description" content="Prezzi Cardmarket, scanner, scambi vicino a te, mazzi e album. Gratis su Android e iPhone.">
     <meta property="og:url" content="https://emabuiadev.github.io/pokevault/">
     <meta name="twitter:card" content="summary">
 
@@ -23,12 +23,13 @@
         "@type": "MobileApplication",
         "name": "PoketCards",
         "alternateName": "PokeVault",
-        "operatingSystem": "Android",
+        "operatingSystem": "Android, iOS",
         "applicationCategory": "LifestyleApplication",
         "inLanguage": ["it", "en"],
         "description": "App per collezionare carte Pokémon in italiano: collezione, valore delle carte con i prezzi Cardmarket, scanner, scambi con i collezionisti vicini, mazzi e album.",
         "url": "https://emabuiadev.github.io/pokevault/",
         "installUrl": "https://play.google.com/store/apps/details?id=com.emabuia.pokevault",
+        "sameAs": ["https://apps.apple.com/it/app/poketcards/id6827701393"],
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
     }
     </script>
@@ -82,6 +83,12 @@
             transition: background 0.2s;
         }
         .cta:hover { background: #3B5BE0; }
+        .ctas {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
         .cta-note {
             margin-top: 10px;
             font-size: 13px;
@@ -147,8 +154,11 @@
             Gestisci la tua collezione, scopri quanto valgono le tue carte con i prezzi
             Cardmarket e scambia carte con i collezionisti della tua provincia.
         </p>
-        <a class="cta" href="https://play.google.com/store/apps/details?id=com.emabuia.pokevault&amp;referrer=utm_source%3Dsito%26utm_medium%3Dweb">Scarica gratis su Google Play</a>
-        <p class="cta-note">Android · Italiano e inglese · Senza pubblicità</p>
+        <div class="ctas">
+            <a class="cta" href="https://play.google.com/store/apps/details?id=com.emabuia.pokevault&amp;referrer=utm_source%3Dsito%26utm_medium%3Dweb">Scarica gratis su Google Play</a>
+            <a class="cta" href="https://apps.apple.com/it/app/poketcards/id6827701393">Scarica gratis su App Store</a>
+        </div>
+        <p class="cta-note">Android e iPhone · Italiano e inglese · Senza pubblicità</p>
         <p class="cta-note">PoketCards è il nuovo nome di PokeVault.</p>
     </header>
 
@@ -188,7 +198,10 @@
 
         <section class="closing">
             <h2>Porta la tua collezione sempre con te</h2>
-            <a class="cta" href="https://play.google.com/store/apps/details?id=com.emabuia.pokevault&amp;referrer=utm_source%3Dsito%26utm_medium%3Dweb">Scarica PoketCards</a>
+            <div class="ctas">
+                <a class="cta" href="https://play.google.com/store/apps/details?id=com.emabuia.pokevault&amp;referrer=utm_source%3Dsito%26utm_medium%3Dweb">Google Play</a>
+                <a class="cta" href="https://apps.apple.com/it/app/poketcards/id6827701393">App Store</a>
+            </div>
         </section>
     </main>
 
@@ -197,6 +210,7 @@
             <a href="/pokevault/privacy-policy">Privacy Policy</a>
             <a href="/pokevault/terms">Termini di Servizio</a>
             <a href="/pokevault/copyright">Copyright &amp; Takedown</a>
+            <a href="https://discord.gg/yQNNknKSRv">Discord</a>
         </nav>
         <p class="footer">
             PoketCards è un'app non ufficiale creata da fan e non è affiliata a Nintendo,
